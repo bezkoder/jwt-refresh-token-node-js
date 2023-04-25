@@ -1,0 +1,10 @@
+/* import the necessary Bootstrap files */
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+
+$theme-colors: (
+  primary: $purple,
+);
+
+/* finally, import Bootstrap */
+@import "bootstrap/scss/bootstrap";

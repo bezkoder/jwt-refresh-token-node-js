@@ -1,8 +1,8 @@
 module.exports = {
-  HOST: "localhost",
-  USER: "root",
-  PASSWORD: "123456",
-  DB: "testdb",
+  HOST: "3.143.203.156",
+  USER: "bn_myapp",
+  PASSWORD: "",
+  DB: "bitnami_myapp",
   dialect: "mysql",
   pool: {
     max: 5,
