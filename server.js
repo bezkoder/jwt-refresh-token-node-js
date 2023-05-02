@@ -1,9 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const bcrypt = require("bcryptjs");
 
 const app = express();
-let apiRouter = express.Router();
 
 const corsOptions = {
   origin: "*",
@@ -20,8 +20,8 @@ app.use(express.urlencoded({ extended: true }));
 // database
 const db = require("./app/models");
 const Role = db.role;
-const Module = db.module;
-const Topic = db.topic;
+const User = db.user;
+const Institution = db.institution;
 //db.sequelize.sync();
 // force: true will drop the table if it already exists
 db.sequelize.sync({ force: true }).then(() => {
@@ -37,10 +37,12 @@ db.sequelize.sync({ force: true }).then(() => {
 // routes
 require("./app/routes/auth.routes")(app);
 require("./app/routes/user.routes")(app);
+require("./app/routes/role.routes")(app);
 require("./app/routes/institution.routes")(app);
 
 require("./app/routes/module.routes")(app);
 require("./app/routes/topic.routes")(app);
+require("./app/routes/content.routes")(app);
 
 require("./app/routes/listen.routes")(app);
 require("./app/routes/speak.routes")(app);
@@ -58,21 +60,71 @@ app.listen(PORT, () => {
 // Only for Testing or initial release
 function initial() {
   Role.create({
-    id: 1,
-    name: "user",
+    name: "SuperAdmin",
   });
 
   Role.create({
-    id: 2,
-    name: "moderator",
+    name: "Sales",
   });
 
   Role.create({
-    id: 3,
-    name: "admin",
+    name: "ContentCreator",
   });
+
+  Role.create({
+    name: "Student",
+  });
+
+  Role.create({
+    name: "InstitutionAdmin",
+  });
+
+  Role.create({
+    name: "DepartmentAdmin",
+  });
+
+  Institution.create({
+    name: "Owner",
+    address: "",
+    pincode: "560068",
+    contact_phone: "",
+    contact_email: "owner@company.com",
+    permissions_list: "",
+    city: "Bangalore",
+    state: "Karnataka",
+    isActive: true,
+    type: 1,
+  })
+    .then((institution) => {
+      console.log("Institution successfully created ... ");
+      // Create SuperAdmin User By default
+
+      User.create({
+        name: "Super Admin",
+        profile_pic: "",
+        preference_id: 1,
+        institutionId: 1,
+        phone: "",
+        isActive: 1,
+        email: "demoSuperAdmin@test.com",
+        password: bcrypt.hashSync("demo", 8),
+        institutionId: 1,
+      })
+        .then((user) => {
+          user.setRoles([1]).then(() => {
+            console.log("User registered successfully!");
+          });
+        })
+        .catch((error) => {
+          console.log("Error inserting to DB " + error);
+        });
+    })
+    .catch((error) => {
+      console.log("Error inserting to DB " + error);
+    });
+
   console.log("Create Modules .... ");
-
+  /*
   var Introduction = {
     video_url: "",
     content: [
@@ -156,4 +208,5 @@ function initial() {
       module.setTopics([topic]);
     });
   });
+  */
 }

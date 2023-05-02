@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import LoginView from "../views/Login.vue";
+import LogoutView from "../views/Logout.vue";
 import store from "../store";
 
 Vue.use(VueRouter);
@@ -25,6 +26,11 @@ const routes = [
         name: "AddUsers",
         component: () => import("@/components/users/AddEditUser.vue"),
       },
+      {
+        path: "/users/edit/:id",
+        name: "EditUser",
+        component: () => import("@/components/users/AddEditUser.vue"),
+      },
       // Institutions Related routes
       {
         path: "/institutions",
@@ -38,7 +44,7 @@ const routes = [
       },
       {
         path: "/modules",
-        name: "modules",
+        name: "Modules",
         component: () => import("@/components/modules/Index.vue"),
       },
       {
@@ -49,13 +55,23 @@ const routes = [
 
       {
         path: "/topics/:id",
-        name: "topics",
+        name: "Topics",
         component: () => import("@/components/modules/TopicsList.vue"),
       },
       {
         path: "/topics/:id/add",
         name: "AddTopics",
         component: () => import("@/components/modules/CreateTopic.vue"),
+      },
+      {
+        path: "/topics/:id/contents/add",
+        name: "AddContents",
+        component: () => import("@/components/modules/CreateContent.vue"),
+      },
+      {
+        path: "/topics/:id/contents",
+        name: "ListContents",
+        component: () => import("@/components/modules/ContentList.vue"),
       },
       {
         path: "/contenteditor",
@@ -85,6 +101,14 @@ const routes = [
     path: "/login",
     name: "login",
     component: LoginView,
+    meta: {
+      requiresAuth: false,
+    },
+  },
+  {
+    path: "/logout",
+    name: "logout",
+    component: LogoutView,
     meta: {
       requiresAuth: false,
     },

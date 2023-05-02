@@ -56,45 +56,40 @@ export default {
     ...mapGetters(["institutions"]),
   },
   mounted() {
-    var _self = this;
+    console.log(this);
+
     this.$store.dispatch("getAllinstitutions");
-    this.axios.get("/api/users").then((resp) => {
-      $("#usersTable").DataTable({
-        data: resp.data.message,
-        columns: [
-          { data: "name" },
-          { data: "email" },
-          { data: "phone" },
-          { data: "institution.name" },
-          { data: "action" },
-        ],
-        columnDefs: [
-          {
-            targets: -1,
-            data: null,
-            defaultContent: "<button>Edit</button>",
-          },
-        ],
+    this.$store.dispatch("getRoles");
+    this.axios
+      .get("/api/users")
+      .then((resp) => {
+        $("#usersTable").DataTable({
+          data: resp.data.message,
+          columns: [
+            { data: "name" },
+            { data: "email" },
+            { data: "phone" },
+            { data: "institution.name" },
+            { data: "action" },
+          ],
+          columnDefs: [
+            {
+              targets: -1,
+              data: null,
+              render: function (data, type, row) {
+                return (
+                  '<a href="/#/users/edit/' +
+                  row.id +
+                  '" class=" btn btn-primary" >Edit</a>'
+                );
+              },
+            },
+          ],
+        });
+      })
+      .catch((error) => {
+        console.log(error);
       });
-    });
-  },
-  data() {
-    return {
-      data: [
-        {
-          name: "Tiger Nixon",
-          email: "System Architect",
-          phone: "$3,120",
-          institution: "Edinburgh",
-        },
-        {
-          name: "Garrett Winters",
-          email: "Director",
-          phone: "$5,300",
-          institution: "Edinburgh",
-        },
-      ],
-    };
   },
   methods: {
     SelectionChanged(e) {

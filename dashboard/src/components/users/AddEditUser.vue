@@ -52,6 +52,21 @@
           </option>
         </select>
       </div>
+      
+      <div class="col-12">
+        <label class="form-label">Role</label>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          v-model="formdata.role"
+        >
+          <option selected>Select Role</option>
+          <!--option value="-1">Not Applicable</option-->
+          <option v-for="item in roles" :value="item.id">
+            {{ item.name }}
+          </option>
+        </select>
+      </div>
       <div class="col-md-6">
         <label for="inputState" class="form-label">State</label>
         <select id="inputState" class="form-select" v-model="formdata.state">
@@ -63,7 +78,7 @@
       <div class="col-md-4">
         <label for="inputCity" class="form-label">City</label>
         <select id="inputCity" class="form-select" v-model="formdata.city">
-          <option v-for="(item, index) in city(formdata.state)" :value="index">
+          <option v-for="(item, index) in city(formdata.state)" :value="item">
             {{ item }}
           </option>
       </div>
@@ -92,7 +107,7 @@ import { mapGetters } from "vuex";
 export default {
   name: "AddEditUser",
   computed: {
-    ...mapGetters(["institutions", "states", "city"]),
+    ...mapGetters(["institutions", "states", "city", "roles"]),
   },
   data() {
     return {
@@ -104,12 +119,26 @@ export default {
         city: "",
         state: "",
         pincode: "",
+        role:""
       },
     };
+  },
+  mounted() {
+    var _self = this;
+    if(this.$route.params.id) {
+      this.axios.get("/api/users/"+this.$route.params.id)
+      .then(response => {
+        _self.formdata = response.data.message;
+      }).catch(error => {
+        
+      });
+    }
   },
   methods: {
     SaveUser() {
       var _self = this;
+      
+      if(! this.$route.params.id) {
       this.axios
         .post("/api/users", this.formdata)
         .then((response) => {
@@ -145,6 +174,30 @@ export default {
             ],
           });
         });
+      }
+      
+      else {
+        this.axios.put("/api/users/"+this.$route.params.id , this.formdata)
+        .then( response => {
+          console.log(resposne)
+          this.$modal.show("dialog", {
+            title: "Edit User",
+            text: "Successfully user information Edited ! ",
+            buttons: [
+              {
+                title: "Close",
+                handler: () => {
+                  this.$modal.hide("dialog");
+                  _self.$router.push("/users");
+                },
+              },
+            ],
+          });
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      }
     },
   },
 };

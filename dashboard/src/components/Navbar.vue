@@ -19,16 +19,21 @@
     <div
       class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0"
     >
-      <drop-down title="User Name" :menuItems="menu" />
+      <drop-down :title="currentLoggedInUsername" :menuItems="menu" />
     </div>
   </nav>
 </template>
 <script>
 import DropDown from "./DropDown.vue";
+import { mapGetters } from "vuex";
+
 export default {
   name: "NavBar",
   components: {
     DropDown,
+  },
+  computed: {
+    ...mapGetters(["currentLoggedInUsername"]),
   },
   data() {
     return {
@@ -39,7 +44,7 @@ export default {
         },
         {
           name: "Sign Out",
-          link: "#",
+          link: "/#/logout",
         },
       ],
     };

@@ -11,7 +11,7 @@
     <table id="topicsTable" class="display" width="100%">
       <thead>
         <tr>
-          <th>Title</th>
+          <th>Type</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -24,32 +24,25 @@ import "datatables.net-dt/js/dataTables.dataTables";
 import "datatables.net-dt/css/jquery.dataTables.min.css";
 
 export default {
-  name: "TopicsList",
+  name: "ContentsList",
   data() {
     return {
-      url: "/topics/" + this.$route.params.id + "/add",
+      url: "/topics/" + this.$route.params.id + "/contents/add",
     };
   },
   mounted() {
-    console.log(this.$route.params.id);
-    var _self = this;
     this.axios
-      .get("/api/module/" + this.$route.params.id + "/topic")
+      .get("/api/content/topic/" + this.$route.params.id)
       .then((resp) => {
         $("#topicsTable").DataTable({
-          data: resp.data.data,
-          columns: [{ data: "title" }, { data: "action" }],
+          data: resp.data.message,
+          columns: [{ data: "type" }, { data: "action" }],
           columnDefs: [
             {
               targets: -1,
               data: null,
-              render: function (data, type, row) {
-                return (
-                  '<a href="/#/topics/' +
-                  row.id +
-                  '/contents" class=" btn btn-primary" > View Contents</a>'
-                );
-              },
+              defaultContent:
+                "<router-link to='/edit' class='btn btn-primary'>Edit</router-link>",
             },
           ],
         });

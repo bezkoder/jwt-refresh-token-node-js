@@ -6,6 +6,12 @@ module.exports = (sequelize, Sequelize) => {
     subtitle: {
       type: Sequelize.STRING,
     },
+    introduction_video_url: {
+      type: Sequelize.TEXT,
+    },
+    introduction_content: {
+      type: Sequelize.TEXT,
+    },
     status: {
       type: Sequelize.INTEGER,
     },
