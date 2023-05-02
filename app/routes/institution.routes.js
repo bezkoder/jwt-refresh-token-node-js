@@ -1,3 +1,4 @@
+const { authJwt } = require("../middleware");
 const controller = require("../controllers/institution.controller");
 
 module.exports = function (app) {
@@ -9,7 +10,7 @@ module.exports = function (app) {
     next();
   });
 
-  app.get("/api/institution/:id", controller.get);
-  app.get("/api/institution/", controller.get);
-  app.post("/api/institution/", controller.create);
+  app.get("/api/institution/:id", [authJwt.verifyToken], controller.get);
+  app.get("/api/institution/", [authJwt.verifyToken], controller.get);
+  app.post("/api/institution/", [authJwt.verifyToken], controller.create);
 };

@@ -27,8 +27,8 @@ exports.create = (req, res) => {
     status: 1,
     industry_type: 1,
     language: 1,
-    introduction_content: req.body.introduction_content,
-    introduction_style: req.body.introduction_style,
+    introduction_content: JSON.stringify(req.body.introduction_content),
+    introduction_video_url: req.body.introduction_video_url,
   })
     .then((module) => {
       res.send({ data: module });

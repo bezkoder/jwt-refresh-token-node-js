@@ -24,19 +24,43 @@
         <textarea class="form-control" id="phone" v-model="formdata.subtitle" />
       </div>
       <div class="col-12">
-        <label for="content" class="form-label">Introduction content</label>
-        <textarea
-          class="form-control"
-          id="content"
-          v-model="formdata.introduction_content"
-        />
+        <div
+          class="d-flex justify-space-between mb-3"
+          style="flex-direction: row; justify-content: space-between"
+        >
+          <label for="content" class="form-label">Introduction content</label>
+          <button @click="AddInputFields">Add</button>
+        </div>
+        <div
+          class="row"
+          v-for="(item, index) in formdata.introduction_content"
+          v-bind:key="index"
+        >
+          <div class="col-2">
+            <input
+              type="text"
+              class="form-control my-2"
+              v-model="item.time"
+              placeholder="Time"
+            />
+          </div>
+          <div class="col-10">
+            <textarea
+              type="text"
+              class="form-control my-2"
+              placeholder="Content"
+              v-model="item.content"
+            />
+          </div>
+        </div>
       </div>
       <div class="col-12">
-        <label for="style" class="form-label">Introduction style</label>
-        <textarea
+        <label for="videoURL" class="form-label">Introduction video URL</label>
+        <input
+          type="text"
           class="form-control"
-          id="style"
-          v-model="formdata.introduction_style"
+          id="videoURL"
+          v-model="formdata.introduction_video_url"
         />
       </div>
       <div class="col-12">
@@ -60,12 +84,15 @@ export default {
       formdata: {
         title: "",
         subtitle: "",
-        introduction_content: "",
-        introduction_style: "",
+        introduction_content: [{ time: "", content: "" }],
+        introduction_video_url: "",
       },
     };
   },
   methods: {
+    AddInputFields() {
+      this.formdata.introduction_content.push({ time: "", content: "" });
+    },
     SaveModule() {
       var _self = this;
       this.axios

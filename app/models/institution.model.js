@@ -27,6 +27,9 @@ module.exports = (sequelize, Sequelize) => {
     isActive: {
       type: Sequelize.BOOLEAN,
     },
+    type: {
+      type: Sequelize.INTEGER,
+    },
   });
 
   return Institution;

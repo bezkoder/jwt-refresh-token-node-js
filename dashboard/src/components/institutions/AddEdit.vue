@@ -58,7 +58,7 @@
       <div class="col-md-4">
         <label for="inputCity" class="form-label">City</label>
         <select id="inputCity" class="form-select" v-model="formdata.city">
-          <option v-for="(item, index) in city(formdata.state)" :value="index">
+          <option v-for="(item, index) in city(formdata.state)" :value="item">
             {{ item }}
           </option>
       </div>
