@@ -6,7 +6,12 @@
     <div class="position-sticky">
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">
+          <a
+            :class="{ 'nav-link': true, active: getSelection == 'home' }"
+            aria-current="page"
+            href="#"
+            @click="SetSelection('home')"
+          >
             <svg
               width="24px"
               height="24px"
@@ -37,7 +42,11 @@
           </a>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/users">
+          <a
+            :class="{ 'nav-link': true, active: getSelection == 'Users' }"
+            href="#"
+            @click="SetSelection('Users')"
+          >
             <svg
               width="24px"
               height="24px"
@@ -57,10 +66,17 @@
               </g>
             </svg>
             <span class="mx-2">Users</span>
-          </router-link>
+          </a>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/institutions">
+          <a
+            :class="{
+              'nav-link': true,
+              active: getSelection == 'Institutions',
+            }"
+            href="#"
+            @click="SetSelection('Institutions')"
+          >
             <svg
               width="24px"
               height="24px"
@@ -111,10 +127,17 @@
               />
             </svg>
             <span class="mx-2">Institutions</span>
-          </router-link>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a
+            :class="{
+              'nav-link': true,
+              active: getSelection == 'Groups',
+            }"
+            href="#"
+            @click="SetSelection('Groups')"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -132,11 +155,18 @@
               <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
               <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
-            <span class="mx-2">Groups</span>
+            <span class="mx-2">Roles</span>
           </a>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/modules">
+          <a
+            :class="{
+              'nav-link': true,
+              active: getSelection == 'Modules',
+            }"
+            href="#"
+            @click="SetSelection('Modules')"
+          >
             <svg
               width="24px"
               height="24px"
@@ -166,10 +196,17 @@
               </g>
             </svg>
             <span class="mx-2">App Content</span>
-          </router-link>
+          </a>
         </li>
-        <li class="nav-item">
-          <router-link class="nav-link" to="/contenteditor">
+        <!--li class="nav-item">
+          <a
+            :class="{
+              'nav-link': true,
+              active: getSelection == 'ContentEditor',
+            }"
+            href="#"
+            @click="SetSelection('ContentEditor')"
+          >
             <svg
               width="24px"
               height="24px"
@@ -203,12 +240,28 @@
               </g>
             </svg>
             <span class="mx-2">Content Editor</span>
-          </router-link>
-        </li>
+          </a>
+        </li-->
       </ul>
     </div>
   </nav>
 </template>
+<script>
+import { mapGetters } from "vuex";
+export default {
+  name: "SideBar",
+  computed: {
+    ...mapGetters(["getSelection"]),
+  },
+  methods: {
+    SetSelection(item) {
+      this.$store.dispatch("setSelection", item);
+      this.$router.push({ name: item });
+    },
+  },
+};
+</script>
+
 <style scoped>
 .sidebar {
   position: fixed;

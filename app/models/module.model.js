@@ -15,10 +15,10 @@ module.exports = (sequelize, Sequelize) => {
     language: {
       type: Sequelize.INTEGER,
     },
-    introduction_content: {
+    introduction_video_url: {
       type: Sequelize.TEXT,
     },
-    introduction_style: {
+    introduction_content: {
       type: Sequelize.TEXT,
     },
   });

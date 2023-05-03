@@ -12,7 +12,11 @@ exports.get = (req, res) => {
     });
   } else {
     // findAll
-    Institution.findAll().then((institutions) => {
+    Institution.findAll({
+      where: {
+        type: 2,
+      },
+    }).then((institutions) => {
       res.send({ message: institutions });
     });
   }
@@ -30,6 +34,7 @@ exports.create = (req, res) => {
     city: req.body.city,
     state: req.body.state,
     isActive: true,
+    type: 2,
   })
     .then((institution) => {
       res.send({ data: institution });

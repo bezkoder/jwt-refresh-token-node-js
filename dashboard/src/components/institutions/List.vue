@@ -49,55 +49,66 @@
 import $ from "jquery";
 import "datatables.net-dt/js/dataTables.dataTables";
 import "datatables.net-dt/css/jquery.dataTables.min.css";
+import { mapGetters } from "vuex";
 
 export default {
   name: "InstitutionsList",
+  computed: {
+    ...mapGetters(["refreshToken"]),
+  },
   mounted() {
-    this.axios.get("/api/institution/").then((resp) => {
-      console.log(resp);
-      $("#usersTable").DataTable({
-        data: resp.data.message,
-        columns: [
-          { data: "name" },
-          { data: "contact_phone" },
-          { data: "contact_email" },
-          { data: "city" },
-          { data: "action" },
-        ],
-        columnDefs: [
-          {
-            targets: -1,
-            data: null,
-            defaultContent: "<button>Edit</button>",
-          },
-        ],
-      });
+    var _self = this;
+    this.fetchInstitutionList(() => {
+      this.axios
+        .post("/api/auth/refreshtoken", {
+          refreshToken: this.refreshToken,
+        })
+        .then((response) => {
+          console.log(response);
+          _self.axios.defaults.headers.common["x-access-token"] =
+            response.data.accessToken;
+          this.$store.dispatch("updateTokens", {
+            refreshToken: response.data.refreshToken,
+            accessToken: response.data.accessToken,
+          });
+          _self.fetchInstitutionList(() => {});
+        });
     });
-    /*
-    
-    */
   },
-  data() {
-    return {
-      data: [
-        {
-          name: "Tiger Nixon",
-          email: "System Architect",
-          phone: "$3,120",
-          institution: "Edinburgh",
-        },
-        {
-          name: "Garrett Winters",
-          email: "Director",
-          phone: "$5,300",
-          institution: "Edinburgh",
-        },
-      ],
-    };
-  },
+
   methods: {
     SelectionChanged(e) {
       console.log("Selection Changed", e.target.value);
+    },
+    fetchInstitutionList(errorCb) {
+      this.axios
+        .get("/api/institution/")
+        .then((resp) => {
+          console.log(resp);
+          $("#usersTable").DataTable({
+            data: resp.data.message,
+            columns: [
+              { data: "name" },
+              { data: "contact_phone" },
+              { data: "contact_email" },
+              { data: "city" },
+              { data: "action" },
+            ],
+            columnDefs: [
+              {
+                targets: -1,
+                data: null,
+                defaultContent: "<button>Edit</button>",
+              },
+            ],
+          });
+        })
+        .catch((error) => {
+          console.log(error);
+          if (error.response.status == 401) {
+            errorCb();
+          }
+        });
     },
   },
 };

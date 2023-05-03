@@ -31,6 +31,7 @@ db.institution = require("../models/institution.model.js")(
 );
 db.module = require("../models/module.model.js")(sequelize, Sequelize);
 db.topic = require("../models/topic.model.js")(sequelize, Sequelize);
+db.content = require("../models/content.model.js")(sequelize, Sequelize);
 
 db.listen = require("../models/listen.model.js")(sequelize, Sequelize);
 db.read = require("../models/read.model.js")(sequelize, Sequelize);
@@ -54,6 +55,11 @@ db.institution.hasMany(db.user, {
   foreignKey: "institutionId",
 });
 db.user.belongsTo(db.institution);
+
+db.topic.hasMany(db.content, {
+  foreignKey: "topicId",
+});
+db.content.belongsTo(db.topic);
 
 db.refreshToken.belongsTo(db.user, {
   foreignKey: "userId",

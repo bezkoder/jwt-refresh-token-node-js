@@ -11,6 +11,20 @@
     <h1 class="h2">Add Topic</h1>
     <form class="row g-3" @submit.prevent="">
       <div class="col-12">
+        <label for="type" class="form-label">Topic Type</label>
+        <select
+          class="form-select"
+          v-model="formdata.type"
+          id="type"
+          @change="SelectedChanged"
+          placeholder="Select Topic Type"
+        >
+          <option value="Topic">Topic</option>
+          <option value="Assessment">Assessment</option>
+          <option value="Vocabulary">Vocabulary</option>
+        </select>
+      </div>
+      <div class="col-12">
         <label for="name" class="form-label">Title</label>
         <input
           type="text"
@@ -25,6 +39,46 @@
           class="form-control"
           id="subtitle"
           v-model="formdata.subtitle"
+        />
+      </div>
+      <div class="col-12">
+        <div
+          class="d-flex justify-space-between mb-3"
+          style="flex-direction: row; justify-content: space-between"
+        >
+          <label for="content" class="form-label">Introduction content</label>
+          <button @click="AddInputFields">Add</button>
+        </div>
+        <div
+          class="row"
+          v-for="(item, index) in formdata.introduction_content"
+          v-bind:key="index"
+        >
+          <div class="col-2">
+            <input
+              type="text"
+              class="form-control my-2"
+              v-model="item.time"
+              placeholder="Time"
+            />
+          </div>
+          <div class="col-10">
+            <textarea
+              type="text"
+              class="form-control my-2"
+              placeholder="Content"
+              v-model="item.content"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <label for="videoURL" class="form-label">Introduction video URL</label>
+        <input
+          type="text"
+          class="form-control"
+          id="videoURL"
+          v-model="formdata.introduction_video_url"
         />
       </div>
       <div class="col-12">
@@ -49,10 +103,19 @@ export default {
         title: "",
         subtitle: "",
         module: this.$route.params.id,
+        introduction_content: [{ time: "", content: "" }],
+        introduction_video_url: "",
+        type: "",
       },
     };
   },
   methods: {
+    SelectedChanged() {
+      console.log("Selection Changed...", this.formdata.type);
+    },
+    AddInputFields() {
+      this.formdata.introduction_content.push({ time: "", content: "" });
+    },
     SaveTopic() {
       var _self = this;
       this.axios

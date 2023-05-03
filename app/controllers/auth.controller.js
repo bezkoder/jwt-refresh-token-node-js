@@ -12,17 +12,17 @@ exports.signup = (req, res) => {
   User.create({
     username: req.body.username,
     email: req.body.email,
-    password: bcrypt.hashSync(req.body.password, 8)
+    password: bcrypt.hashSync(req.body.password, 8),
   })
-    .then(user => {
+    .then((user) => {
       if (req.body.roles) {
         Role.findAll({
           where: {
             name: {
-              [Op.or]: req.body.roles
-            }
-          }
-        }).then(roles => {
+              [Op.or]: req.body.roles,
+            },
+          },
+        }).then((roles) => {
           user.setRoles(roles).then(() => {
             res.send({ message: "User registered successfully!" });
           });
@@ -34,7 +34,7 @@ exports.signup = (req, res) => {
         });
       }
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).send({ message: err.message });
     });
 };
@@ -42,8 +42,8 @@ exports.signup = (req, res) => {
 exports.signin = (req, res) => {
   User.findOne({
     where: {
-      username: req.body.username
-    }
+      email: req.body.email,
+    },
   })
     .then(async (user) => {
       if (!user) {
@@ -58,25 +58,27 @@ exports.signin = (req, res) => {
       if (!passwordIsValid) {
         return res.status(401).send({
           accessToken: null,
-          message: "Invalid Password!"
+          message: "Invalid Email/Password!",
         });
       }
 
-      const token = jwt.sign({ id: user.id }, config.secret, {
-        expiresIn: config.jwtExpiration
-      });
-
-      let refreshToken = await RefreshToken.createToken(user);
-
       let authorities = [];
-      user.getRoles().then(roles => {
+      user.getRoles().then(async (roles) => {
         for (let i = 0; i < roles.length; i++) {
           authorities.push("ROLE_" + roles[i].name.toUpperCase());
         }
-
+        const token = jwt.sign(
+          { id: user.id, role: authorities },
+          config.secret,
+          {
+            expiresIn: config.jwtExpiration,
+          }
+        );
+        user["role"] = authorities;
+        let refreshToken = await RefreshToken.createToken(user);
         res.status(200).send({
           id: user.id,
-          username: user.username,
+          name: user.name,
           email: user.email,
           roles: authorities,
           accessToken: token,
@@ -84,7 +86,7 @@ exports.signin = (req, res) => {
         });
       });
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).send({ message: err.message });
     });
 };
@@ -97,18 +99,18 @@ exports.refreshToken = async (req, res) => {
   }
 
   try {
-    let refreshToken = await RefreshToken.findOne({ where: { token: requestToken } });
-
-    console.log(refreshToken)
+    let refreshToken = await RefreshToken.findOne({
+      where: { token: requestToken },
+    });
 
     if (!refreshToken) {
       res.status(403).json({ message: "Refresh token is not in database!" });
       return;
     }
-
+    var role = refreshToken.role;
     if (RefreshToken.verifyExpiration(refreshToken)) {
       RefreshToken.destroy({ where: { id: refreshToken.id } });
-      
+
       res.status(403).json({
         message: "Refresh token was expired. Please make a new signin request",
       });
@@ -116,7 +118,7 @@ exports.refreshToken = async (req, res) => {
     }
 
     const user = await refreshToken.getUser();
-    let newAccessToken = jwt.sign({ id: user.id }, config.secret, {
+    let newAccessToken = jwt.sign({ id: user.id, role: role }, config.secret, {
       expiresIn: config.jwtExpiration,
     });
 

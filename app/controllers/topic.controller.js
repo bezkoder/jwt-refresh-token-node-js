@@ -20,6 +20,8 @@ exports.create = (req, res) => {
   Topic.create({
     title: req.body.title,
     subtitle: req.body.subtitle,
+    introduction_content: JSON.stringify(req.body.introduction_content),
+    introduction_video_url: req.body.introduction_video_url,
     status: 1,
   })
     .then((topic) => {
