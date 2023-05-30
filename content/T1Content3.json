@@ -1,0 +1,64 @@
+[
+  {
+    "type": "paragraph",
+    "styles": ["bold"],
+    "text": "Choose the right smart tip that matches the following scenarios."
+  },
+  {
+    "type": "SingleChoice",
+    "text": {
+      "question": "Kunal advised me not to worry too much about making mistakes while speaking in English, so I was able to communicate with ease.",
+      "options": [
+        "Communicate with confidence",
+        "Don't worry too much about making mistakes"
+      ],
+      "correct": "Don't worry too much about making mistakes"
+    }
+  },
+  {
+    "type": "SingleChoice",
+    "text": {
+      "question": "Our physics professor explained the complex concept of thermodynamics very clearly and at a slow pace that all of us were able to understand.",
+      "options": ["Don't speak very fast", "Be a confident speaker"],
+      "correct": "Don't speak very fast"
+    }
+  },
+  {
+    "type": "SingleChoice",
+    "text": {
+      "question": "Geeta was from a  non-English medium school, but with time, she spoke in English with ease.",
+      "options": [
+        "Speak Spontaneously",
+        "Don’t follow written English style/ don’t learn by heart"
+      ],
+      "correct": "Speak Spontaneously"
+    }
+  },
+  {
+    "type": "SingleChoice",
+    "text": {
+      "question": "I listened to ‘The English’ podcast everyday for an hour for two months and now my English speaking skills have drastically improved.",
+      "options": [
+        "Hear English everywhere",
+        "Learn English idioms and phrases"
+      ],
+      "correct": "Hear English everywhere"
+    }
+  },
+  {
+    "type": "SingleChoice",
+    "text": {
+      "question": "Our English professor always advised us to have a pocket dictionary handy and learn new words everyday as it will really help us during interviews.",
+      "options": [
+        "Don't worry about starting trouble",
+        "Develop your vocabulary"
+      ],
+      "correct": "Develop your vocabulary"
+    }
+  },
+  {
+    "type": "ActionButtons",
+    "text": "/topic/1/content/4",
+    "next_btn_state": true
+  }
+]

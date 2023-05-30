@@ -1,0 +1,18 @@
+[
+  {
+    "type": "TextTitle",
+    "styles": ["center"],
+    "fontSize": 40,
+    "text": "You have successfully completed Topic 1."
+  },
+  {
+    "type": "TextTitle",
+    "styles": ["center"],
+    "fontSize": 30,
+    "text": "All the best for Topic 2!"
+  },
+  {
+    "type": "ActionButtons",
+    "text": "/module/1/topics"
+  }
+]

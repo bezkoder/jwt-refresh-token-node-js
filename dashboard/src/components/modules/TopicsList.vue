@@ -37,7 +37,7 @@ export default {
       .get("/api/module/" + this.$route.params.id + "/topic")
       .then((resp) => {
         $("#topicsTable").DataTable({
-          data: resp.data.data,
+          data: resp.data.message,
           columns: [{ data: "title" }, { data: "action" }],
           columnDefs: [
             {

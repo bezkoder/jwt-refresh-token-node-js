@@ -1,0 +1,321 @@
+[
+  {
+    "type": "MultiPage",
+    "text": [
+      {
+        "type": "SubPage",
+        "text": [
+          {
+            "type": "TextTitle",
+            "text": "Pronunciation tip"
+          },
+          {
+            "type": "paragraph",
+            "text": "Rate of speech"
+          },
+          {
+            "type": "list",
+            "text": [
+              "Rate of speech refers to how fast or slow someone talks.",
+              "If we speak too fast, it can be hard for people to understand us.",
+              "If we speak too slowly, people might get bored or lose interest.",
+              "As a speaker, it's important to vary the speed of your speech to keep your audience engaged.",
+              "The best rate of speech depends on the situation and audience, but speaking at a pace of around 120-150 words per minute is generally considered effective for informal  situations.",
+              "However, a pace of 60 to 75 words is considered effective in formal situations like presentations, meetings and video or audio calls."
+            ]
+          },
+          {
+            "type": "ActionButtons",
+            "text": {
+              "event": "NextPage"
+            }
+          }
+        ]
+      },
+      {
+        "type": "SubPage",
+        "text": [
+          {
+            "type": "TextTitle",
+            "text": "Pronunciation tip"
+          },
+          {
+            "type": "paragraph",
+            "text": "Let’s see some guidelines to speeding and slowing down "
+          },
+          {
+            "type": "paragraph",
+            "text": "Finding the right rate of speech, depending on the situations you are in can help ensure clear and effective communication."
+          },
+          {
+            "type": "list",
+            "text": [
+              "Aim for a conversational pace, where you use a mix of fast and slow speeds.",
+              "You can speak quickly to show excitement, urgency, or strong emotions, and speak slowly to emphasise important points or help the audience understand new ideas."
+            ]
+          },
+          {
+            "type": "TextTitle",
+            "text": "For example,"
+          },
+          {
+            "type": "list",
+            "text": [
+              "A news anchor speaking at a moderate pace so that viewers can understand the information being shared easily.",
+              "A stand-up comedian speaking quickly to keep the audience entertained and engaged.",
+              "Your professor speaks slowly during a lecture to help students understand complex concepts.",
+              "A motivational speaker using changes in pace to keep the audience interested and excited.",
+              "A customer service representative speaks slowly and clearly to ensure that customers can follow instructions and get the help they need."
+            ]
+          },
+          {
+            "type": "ActionButtons",
+            "text": {
+              "event": "NextPage"
+            }
+          }
+        ]
+      },
+      {
+        "type": "SubPage",
+        "text": [
+          {
+            "type": "TextTitle",
+            "text": "Pronunciation tip"
+          },
+          {
+            "type": "paragraph",
+            "text": "Know your own rate of speech."
+          },
+
+          {
+            "type": "list",
+            "text": [
+              "Pick a topic you enjoy speaking about.",
+              "Speak for a minute about the topic and record it here.",
+              "We will count the words and you will know your rate of speech."
+            ]
+          },
+          {
+            "type": "Recorder"
+          },
+          {
+            "type": "ActionButtons",
+            "text": {
+              "event": "NextPage"
+            }
+          }
+        ]
+      },
+
+      {
+        "type": "SubPage",
+        "text": [
+          {
+            "type": "TextTitle",
+            "text": "Vocabulary Tip"
+          },
+          {
+            "type": "paragraph",
+            "text": "Word association"
+          },
+
+          {
+            "type": "list",
+            "text": [
+              "Word association is a way to study how people connect words with each other. For example, if someone hears the word \"dog,\" they might associate it with \"cat\" or \"bark.\"",
+              "Word association is the way in which our brain connects different words with each other. ",
+              "By knowing how people connect different words, we can choose our words more carefully to make sure we're understood. "
+            ]
+          },
+          {
+            "type": "ImageBox",
+            "text": "https://picsum.photos/200/300"
+          },
+          {
+            "type": "ActionButtons",
+            "text": {
+              "event": "NextPage"
+            }
+          }
+        ]
+      },
+      {
+        "type": "SubPage",
+        "text": [
+          {
+            "type": "TextTitle",
+            "text": "Vocabulary Tip"
+          },
+          {
+            "type": "paragraph",
+            "text": "Word associations are based on our experiences and memories, and they can vary from person to person. Here are few examples,"
+          },
+
+          {
+            "type": "SimpleTable",
+            "text": {
+              "header": [
+                [
+                  { "text": "Word" },
+                  { "text": "Word1" },
+                  { "text": "Word2" },
+                  { "text": "Word3" }
+                ]
+              ],
+              "rows": [
+                [
+                  { "text": "Internet" },
+                  { "text": "Computer" },
+                  { "text": "Website" },
+                  { "text": "Wifi" }
+                ],
+                [
+                  { "text": "Machine" },
+                  { "text": "Mechanical" },
+                  { "text": "Electricity" },
+                  { "text": "Current" }
+                ],
+                [
+                  { "text": "Happy" },
+                  { "text": "Smile" },
+                  { "text": "Joy" },
+                  { "text": "Laugh" }
+                ],
+                [
+                  { "text": "Beach" },
+                  { "text": "Waves" },
+                  { "text": "Shells" },
+                  { "text": "Sand" }
+                ]
+              ]
+            }
+          },
+          {
+            "type": "ActionButtons",
+            "text": {
+              "event": "NextPage"
+            }
+          }
+        ]
+      },
+      {
+        "type": "SubPage",
+        "text": [
+          {
+            "type": "TextTitle",
+            "text": "Vocabulary Tip"
+          },
+          {
+            "type": "paragraph",
+            "text": "Now that you have an idea try to associate the words given below."
+          },
+
+          {
+            "type": "SimpleTable",
+            "text": {
+              "header": [
+                [
+                  { "text": "Word" },
+                  { "text": "Word1" },
+                  { "text": "Word2" },
+                  { "text": "Word3" }
+                ]
+              ],
+              "rows": [
+                [
+                  { "text": "Travel" },
+                  { "text": "Train" },
+                  { "text": "" },
+                  { "text": "" }
+                ],
+                [
+                  { "text": "Software" },
+                  { "text": "Development" },
+                  { "text": "" },
+                  { "text": "" }
+                ],
+                [
+                  { "text": "Mathematics" },
+                  { "text": "Numbers" },
+                  { "text": "" },
+                  { "text": "" }
+                ]
+              ]
+            }
+          },
+          {
+            "type": "ActionButtons",
+            "text": {
+              "event": "NextPage"
+            }
+          }
+        ]
+      },
+
+      {
+        "type": "SubPage",
+        "text": [
+          {
+            "type": "TextTitle",
+            "text": "Vocabulary Tip"
+          },
+          {
+            "type": "paragraph",
+            "text": "Look at these words below. Let’s first learn the meaning and then pronounce them correctly."
+          },
+
+          {
+            "type": "SimpleTable",
+            "text": {
+              "header": [
+                [
+                  { "text": "Word" },
+                  { "text": "Meaning" },
+                  { "text": "Correct pronunciation" },
+                  { "text": "Example sentence" }
+                ]
+              ],
+              "rows": [
+                [
+                  { "text": "Empower" },
+                  {
+                    "text": "Give someone the authority, power, or ability to do something."
+                  },
+                  {
+                    "text": "<b>Em</b>power <i onclick=\"document.getElementById('empower').play();\" aria-hidden=\"true\" class=\"v-icon notranslate mdi mdi-volume-high theme--light\"></i><audio id=\"empower\" src=\"https://nobybr-8080.csb.app/content/media/W1.wav\" controls hidden></audio>"
+                  },
+                  {
+                    "text": "The organisation works to empower women in rural communities."
+                  }
+                ],
+                [
+                  { "text": "Device" },
+                  {
+                    "text": "An object or machine that is designed for a specific purpose."
+                  },
+                  { "text": "<b>De</b>vice" },
+                  { "text": "" }
+                ],
+                [
+                  { "text": "Software" },
+                  {
+                    "text": "A set of instructions or programs that control the operation of a computer or other electronic device."
+                  },
+                  { "text": "<b>Soft</b>ware" },
+                  {
+                    "text": "Deepak studied computer science and has become a pro in software development."
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "type": "ActionButtons",
+            "text": "/module/1/topics"
+          }
+        ]
+      }
+    ]
+  }
+]

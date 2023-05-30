@@ -1,0 +1,30 @@
+[
+  {
+    "type": "paragraph",
+    "text": "There are five topics below. Choose the one you like the best and speak on it for 60 seconds. You can write before you speak. Remember the Smart tips, especially the first one - Don’t worry too much about Making Mistakes.",
+    "aivoiceover": true
+  },
+  {
+    "type": "list",
+    "text": [
+      "Communicative English helps engineering students in getting job opportunities",
+      "The role of technology in our daily lives",
+      "Engineering a good career option",
+      "Pros and cons of smart devices",
+      "My daily routine"
+    ]
+  },
+  {
+    "type": "TextBox",
+    "text": {
+      "label": "Write here"
+    }
+  },
+  {
+    "type": "Recorder"
+  },
+  {
+    "type": "ActionButtons",
+    "text": "/topic/1/content/5"
+  }
+]

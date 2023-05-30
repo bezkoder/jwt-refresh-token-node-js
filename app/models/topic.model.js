@@ -15,6 +15,12 @@ module.exports = (sequelize, Sequelize) => {
     status: {
       type: Sequelize.INTEGER,
     },
+    type: {
+      type: Sequelize.STRING,
+    },
+    industry_type: {
+      type: Sequelize.STRING,
+    },
   });
 
   return Topic;

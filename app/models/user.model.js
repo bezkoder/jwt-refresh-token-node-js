@@ -36,6 +36,9 @@ module.exports = (sequelize, Sequelize) => {
     pincode: {
       type: Sequelize.STRING,
     },
+    industry_type: {
+      type: Sequelize.STRING,
+    },
   });
 
   return User;

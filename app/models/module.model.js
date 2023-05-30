@@ -10,7 +10,7 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.INTEGER,
     },
     industry_type: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.STRING,
     },
     language: {
       type: Sequelize.INTEGER,
@@ -19,6 +19,9 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.TEXT,
     },
     introduction_content: {
+      type: Sequelize.TEXT,
+    },
+    key_outcomes: {
       type: Sequelize.TEXT,
     },
   });

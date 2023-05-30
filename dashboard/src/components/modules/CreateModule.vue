@@ -20,8 +20,26 @@
         />
       </div>
       <div class="col-12">
-        <label for="phone" class="form-label">subtitle</label>
-        <textarea class="form-control" id="phone" v-model="formdata.subtitle" />
+        <label for="subtitle" class="form-label">Key Outcomes</label>
+        <textarea
+          class="form-control"
+          id="subtitle"
+          v-model="formdata.subtitle"
+        />
+      </div>
+      <div class="col-12">
+        <label class="form-label">Industry Type</label>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          v-model="formdata.industry_type"
+        >
+          <option selected>Select Industry Type</option>
+          <!--option value="-1">Not Applicable</option-->
+          <option value="E">Engineering</option>
+          <option value="H">Healthcare</option>
+          <option value="M">Management</option>
+        </select>
       </div>
       <div class="col-12">
         <div
@@ -86,6 +104,8 @@ export default {
         subtitle: "",
         introduction_content: [{ time: "", content: "" }],
         introduction_video_url: "",
+        industry_type: "",
+        key_outcomes: "",
       },
     };
   },

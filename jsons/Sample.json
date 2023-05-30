@@ -1,0 +1,1214 @@
+// Engineering Topic 1
+
+// Introduction
+[
+      {
+        type: "page-title",
+        text: "Topic Introduction"
+      },
+      {
+        type: "VideoWidget",
+        text:
+          "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4"
+      },
+      {
+        type: "Section",
+        scroll: true,
+        text: [
+          {
+            type: "paragraph",
+            text: "Let me tell you a short story about a person named ‘John’."
+          },
+          {
+            type: "paragraph",
+            styles: ["italic"],
+            text:
+              "John woke up in the morning. John went to the store. John bought some bread. John paid for the bread. John came back home and John ate the bread."
+          },
+          {
+            type: "paragraph",
+            text: "Don’t you feel the word John is very repetitive?"
+          },
+          {
+            type: "paragraph",
+            text:
+              "Here is where we need to use a substitute word for John. A pronoun is a substitute for the noun. A pronoun is a word used in the place of a noun to avoid repetition and it makes the sentence sound less repetitive."
+          },
+          {
+            type: "paragraph",
+            text:
+              "There are many types of pronouns which are important in their own way, and each serves a specific purpose in communication. However, personal pronouns are generally considered the most important type of pronouns; they  indicate the gender, number, and person of the subject or object. They help us to communicate more effectively by avoiding repetitive use of nouns. Personal pronouns can also be used to show respect and sensitivity towards individuals' gender identities and cultural backgrounds."
+          },
+          {
+            type: "paragraph",
+            text:
+              "Overall, pronouns are an important tool for effective and efficient communication in English, allowing speakers and writers to convey meaning clearly and concisely."
+          }
+        ]
+      },
+      {
+        type: "ActionButtons",
+        text: "#"
+      }
+    ]
+// Read
+
+[
+      {
+        type: "TextTitle",
+        text: "Personal pronouns and classifications"
+      },
+      {
+        type: "paragraph",
+        text:
+          "Pronouns are an essential part of communication, and they play a significant role in how we express ourselves and interact with others."
+      },
+      {
+        type: "list",
+        text: [
+          "Personal pronouns refer to specific people or things and indicate the person's role in the conversation. Personal pronouns can be categorised into three persons: first person, second person, and third person.",
+
+          'The use of personal pronouns can help to establish a connection between the speaker and the audience, and can help to convey the tone and intent of the message being conveyed. For example, the use of first-person pronouns like "I" or "we" can create a sense of intimacy and personal connection, while the use of third-person pronouns like "he" or "she" can create a more formal tone.',
+
+          {
+            type: "item",
+            data:
+              "Overall, while all types of pronouns are important in communication, personal pronouns are the most crucial as they convey essential information about the people or things being 	referred to, and they help us to communicate more effectively and respectfully.",
+            text: {
+              type: "list",
+              text: [
+                'First person pronouns refer to the speaker or writer, such as "I," "we," and "us."',
+                'Second person pronouns refer to the person or people being spoken to, such as "you, your." ',
+                'Third person pronouns refer to someone or something being spoken about, such as "he," "she," "it," "they," and "them."'
+              ]
+            }
+          },
+          'It\'s important to use the correct pronouns for individuals and to be respectful of their gender identity. For example, some individuals may prefer to use gender-neutral pronouns such as "they" or "them" instead of traditional binary pronouns like "he" or "she".'
+        ]
+      },
+      {
+        type: "TextTitle",
+        text: "Examples:"
+      },
+      {
+        type: "list",
+        text: [
+          "Veda is my friend. I enjoy her company.",
+          "Prince is a dog. He is very friendly.",
+          "Sid is a student. This book belongs to him"
+        ]
+      },
+      {
+        type: "TextTitle",
+        styles: ["underline"],
+        text: "Person and Pronouns"
+      },
+      {
+        type: "paragraph",
+        text:
+          "Now let us dig deeper and understand Singular, Plural and Subject and Object pronouns. Observe the table below."
+      },
+      {
+        type: "SimpleTable",
+        text: {
+          header: [
+            [
+              { text: "", rowspan: 2, dummy: 1 },
+              { text: "Person", rowspan: 2 },
+              { text: "Personal Pronoun", colspan: 2 }
+            ],
+            [
+              { text: "" },
+              { text: "" },
+              { text: "Subject" },
+              { text: "Object" }
+            ]
+          ],
+          rows: [
+            [
+              { text: "Singular", rowspan: 3 },
+              { text: "1st" },
+              { text: "i" },
+              { text: "me" }
+            ],
+            [{ text: "" }, { text: "2nd" }, { text: "you" }, { text: "you" }],
+            [
+              { text: "" },
+              { text: "3rd" },
+              { text: "he, she, it" },
+              { text: "him, her, it" }
+            ],
+            [
+              { text: "Plural", rowspan: 3 },
+              { text: "1st" },
+              { text: "we" },
+              { text: "us" }
+            ],
+            [{ text: "" }, { text: "2nd" }, { text: "you" }, { text: "you" }],
+            [{ text: "" }, { text: "3rd" }, { text: "they" }, { text: "them" }]
+          ]
+        }
+      },
+      {
+        type: "ActionButtons",
+        text: "#"
+      }
+    ]
+
+
+
+// Read
+
+[
+      {
+        type: "paragraph",
+        text: "We will now learn more about the other types of pronouns"
+      },
+      {
+        type: "TextTitle",
+        styles: ["underline"],
+        text: "Reflexive pronouns:"
+      },
+      {
+        type: "paragraph",
+        text:
+          "These are used instead of an object pronoun when the object is the same person or thing as the subject. This is by adding self or selves to personal pronouns from them. The subject is the doer and receiver of the action"
+      },
+      {
+        type: "paragraph",
+        text:
+          "Myself, yourself, themselves, ourself, ourselves, himself and herself"
+      },
+      {
+        type: "TextTitle",
+        text: "Examples:"
+      },
+      {
+        type: "list",
+        text: [
+          "I cut myself while shaving.",
+          "They built the house themselves.",
+          "We tested the product ourselves."
+        ]
+      },
+
+      {
+        type: "TextTitle",
+        styles: ["underline"],
+        text: "Demonstrative Pronouns: "
+      },
+      {
+        type: "paragraph",
+        text:
+          "They refer to the nouns for which they are used. These are used for things near or closely connected to the subject, or for things further away."
+      },
+      {
+        type: "TextTitle",
+        text: "Examples:"
+      },
+      {
+        type: "list",
+        text: [
+          "This is my pen and that is yours.",
+          "This is the same book, which I read sometime back.",
+          "Did you complete that water storage project?"
+        ]
+      },
+
+      {
+        type: "TextTitle",
+        styles: ["underline"],
+        text: "Interrogative Pronouns"
+      },
+      {
+        type: "paragraph",
+        text: "They are used in questions – who, which, whose"
+      },
+      {
+        type: "TextTitle",
+        text: "Examples:"
+      },
+      {
+        type: "list",
+        text: [
+          "Who is the thief?",
+          "Which dish do you prefer?",
+          "Whose design was selected?"
+        ]
+      },
+
+      {
+        type: "TextTitle",
+        styles: ["underline"],
+        text: "Relative Pronouns"
+      },
+      {
+        type: "paragraph",
+        text: "They refer to nouns mentioned before them."
+      },
+      {
+        type: "TextTitle",
+        text: "Examples:"
+      },
+      {
+        type: "list",
+        text: [
+          "He is the boy who danced at the party.",
+          "This is the bungalow, which my uncle has bought.",
+          "This is our CEO, who has just returned from our head office in the USA."
+        ]
+      },
+
+      {
+        type: "TextTitle",
+        styles: ["underline"],
+        text: "Indefinite Pronouns"
+      },
+      {
+        type: "paragraph",
+        text:
+          "These do not have any definite nouns. These are used to talk about people/things in a very general way, especially because we can’t or do not want to identify them."
+      },
+      {
+        type: "paragraph",
+        text: "They are like someone, anybody, something, somebody, everybody"
+      },
+      {
+        type: "TextTitle",
+        text: "Examples:"
+      },
+      {
+        type: "list",
+        text: [
+          "Everyone is coming to the party.",
+          "Each of us will participate.",
+          "Someone was interested in resolving the technical issue."
+        ]
+      },
+      {
+        type: "ActionButtons",
+        text: "#"
+      }
+    ]
+
+// Practice 1
+
+[
+      {
+        type: "paragraph",
+        text:
+          "You will see six sentences below. Identify the pronoun or the naming word substitute in the sentence by highlighting the word in green."
+      },
+      {
+        type: "SelectOption",
+        text: [
+          {
+            type: "SelectQuestion",
+            text: {
+              parts: [
+                "Betsy",
+                "update_option",
+                "has quit the development team."
+              ],
+              options: ["herself", "/", "myself"],
+              correctAns: "herself"
+            }
+          },
+          {
+            type: "SelectQuestion",
+            text: {
+              parts: [
+                "This airport construction project belongs to",
+                "update_option"
+              ],
+              options: ["his", "/", "him"],
+              correctAns: "him"
+            }
+          },
+          {
+            type: "SelectQuestion",
+            text: {
+              parts: [
+                "update_option",
+                "needs to inspect the welding joints for quality assurance."
+              ],
+              options: ["Somebody", "/", "Anyone"],
+              correctAns: "Somebody"
+            }
+          },
+          {
+            type: "SelectQuestion",
+            text: {
+              parts: [
+                "update_option",
+                "are aerospace engineers who design and test aircraft structures."
+              ],
+              options: ["We", "/", "Us"],
+              correctAns: "We"
+            }
+          },
+          {
+            type: "SelectQuestion",
+            text: {
+              parts: [
+                "update_option",
+                "is optimising chemical processes for pharmaceutical production?"
+              ],
+              options: ["Whose", "/", "Who"],
+              correctAns: "Who"
+            }
+          },
+          {
+            type: "SelectQuestion",
+            text: {
+              parts: [
+                "update_option",
+                "are working on developing cutting-edge algorithms for autonomous vehicles."
+              ],
+              options: ["They", "/", "Them"],
+              correctAns: "They"
+            }
+          }
+        ]
+      },
+      {
+        type: "ActionButtons",
+        text: "#"
+      }
+    ]
+
+
+// Write
+
+[
+      {
+        type: "paragraph",
+        text:
+          "The sentences below don’t have pronouns. Choose the correct one from below list"
+      },
+      {
+        type: "paragraph",
+        styles: ["bold"],
+        text: "Anybody, Whom, Themselves, He, I, They, These, Who"
+      },
+      {
+        type: "SelectOption",
+        text: [
+          {
+            type: "FillBlankQuestion",
+            text: {
+              parts: [
+                "fill_input",
+                "is experienced in designing automotive components."
+              ],
+              correctAns: "He"
+            }
+          },
+          {
+            type: "FillBlankQuestion",
+            text: {
+              parts: [
+                "fill_input",
+                "did you contact for the bridge construction project?"
+              ],
+              correctAns: "Whom"
+            }
+          },
+          {
+            type: "FillBlankQuestion",
+            text: {
+              parts: [
+                "They",
+                "fill_input",
+                "are developing a new medical device to improve patient outcomes."
+              ],
+              correctAns: "themselves"
+            }
+          },
+          {
+            type: "FillBlankQuestion",
+            text: {
+              parts: [
+                "fill_input",
+                "are the ones who are visiting us tomorrow."
+              ],
+              correctAns: "They"
+            }
+          },
+          {
+            type: "FillBlankQuestion",
+            text: {
+              parts: [
+                "Does",
+                "fill_input",
+                "have experience in renewable energy technologies?"
+              ],
+              correctAns: "anybody"
+            }
+          },
+          {
+            type: "FillBlankQuestion",
+            text: {
+              parts: ["fill_input", "cookies are delicious."],
+              correctAns: "These"
+            }
+          },
+          {
+            type: "FillBlankQuestion",
+            text: {
+              parts: [
+                "fill_input",
+                "focus on sustainable waste management solutions."
+              ],
+              correctAns: "I"
+            }
+          },
+          {
+            type: "FillBlankQuestion",
+            text: {
+              parts: [
+                "The team is collaborating with a software engineer",
+                "fill_input",
+                "specialises in embedded systems."
+              ],
+              correctAns: "who"
+            }
+          }
+        ]
+      },
+      {
+        type: "ActionButtons",
+        text: "#"
+      }
+    ]
+	
+	
+	
+
+// Listen :todo
+[
+	{
+		type: "paragraph",
+		text: "Listen to the passage. They do not have pronouns. The nouns are repeated."
+	},
+	{
+		type: "paragraph",
+		text: "Does it sound correct?"
+	},
+	{
+		type: "paragraph",
+		text: "It doesn't, right."
+	},
+	{
+		type: "paragraph",
+		text: "Add the appropriate pronouns and write the corrected version below."
+	},
+	{
+		type: "BlockButton",
+		text: {
+			label: "Listen now",
+			event: "StartAudio"
+		}
+	},
+	{
+		type: "paragraph",
+		text: "Maya had always been fascinated by how infrastructure and buildings were constructed. Maya was determined to make a positive impact on Maya’s community through Maya’s work. Maya studied civil engineering in college and graduated with top honours. Maya's first job was with a construction firm that specialises in building bridges. Throughout Maya’s career, Maya continued to make a significant impact on various infrastructure projects, from roads to buildings to water supply systems. Maya actively mentored and inspired other aspiring engineers, encouraging engineers to pursue engineer’s dreams. Maya's contributions were highly valued, and Maya’s projects made a tangible difference in the lives of many people. Maya continued to push boundaries and make a positive impact on Maya’s community, leaving a lasting legacy as a skilled and passionate civil engineer."
+	},
+	{
+		type: "TextBox",
+		label: "Write here",
+		text: {
+			corrected: "Maya had always been fascinated by how infrastructure and buildings were constructed. She was determined to make a positive impact on her community through her work. She studied civil engineering in college and graduated with top honours. Her first job was with a construction firm that specialises in building bridges. Throughout her career, she continued to make a significant impact on various infrastructure projects, from roads to buildings to water supply systems. She actively mentored and inspired other aspiring engineers, encouraging them to pursue their dreams.  Her contributions were highly valued, and her projects made a tangible difference in the lives of many people. She continued to push boundaries and make a positive impact on her community, leaving a lasting legacy as a skilled and passionate civil engineer.",
+		}
+	},
+	{
+		type: "BlockButton",
+		text: {
+			label: "Submit",
+			event: "StartAudio"
+		}
+	},
+	{
+        type: "ActionButtons",
+        text: "#"
+      }
+]
+
+
+//Speak :todo
+[
+      {
+        type: "paragraph",
+        text:
+          "The pronouns used in the following passage are wrong. Read carefully, and change to appropriate pronouns, write the corrected version below and speak out."
+      },
+      {
+        type: "paragraph",
+        styles: ["bold", "italic"],
+        text:
+          "I studied English in my first school, but I don’t remember something from there. We had one teacher who always brought music tapes and she played it for we to learn the words. I think they were her favourite songs, but in our class some one really understood the words. She put us in groups to discuss the songs, but anyone talked about something  different in his groups and no one were trying to practise English. I only remember the words of one song that went like that: ‘You can’t always get what you want, but if you try sometimes, you get what you need.’ That were interesting words, and obviously, I did learn something from those teacher."
+      },
+      {
+        type: "Recorder"
+      },
+      {
+        type: "BlockButton",
+        text: {
+          label: "Submit",
+          event: "StartAudio"
+        }
+      },
+      {
+        type: "ActionButtons",
+        text: "#"
+      }
+    ]
+
+
+// EOT
+[
+      {
+        type: "TextTitle",
+        styles: ["center"],
+        fontSize: 40,
+        text: "You have successfully completed Topic 1."
+      },
+      {
+        type: "TextTitle",
+        styles: ["center"],
+        fontSize: 30,
+        text: "All the best for Topic 2!"
+      },
+      {
+        type: "ActionButtons",
+        text: "#"
+      }
+    ]
+
+
+// Topic 2
+
+// Introduction
+
+[
+	{
+		type: "VideoWidget",
+		text: "",
+	},
+	{
+		type: "paragraph",
+		text: "‘Linda walked through the garden wearing a dress’  definitely sounds less interesting than ‘Linda walked slowly through the lush green garden wearing a beautiful red dress’.",
+	},
+	{
+		type: "paragraph",
+		text: "Right? ",
+	},
+	{
+		type: "paragraph",
+		text: "What makes speaking or writing a story or incident interesting is using descriptive words - words that add detail and colour to writing. They help to paint a picture of what is being described in the mind of the listener. These descriptive words are called adjectives. They are an important tool for effective communication, as they allow speakers and writers to convey their thoughts and ideas more precisely, making it easier for their audience to understand what they are talking about.",
+	},
+	{
+		type: "paragraph",
+		text: "For example, a description of a person's appearance might be followed by a comparison to another person in order to highlight similarities or differences between them. Similarly, a description of a product might be followed by a comparison to a competing product in order to help consumers make an informed choice.",
+	},
+	{
+		type: "paragraph",
+		text: "Descriptors or Adjectives are words that describe,",
+	},
+	
+	{
+		type: "paragraph",
+		text: "The qualities, specific traits, features or states of nouns like - big, attractive, silly, intelligent, fun, serious.",
+	},
+	
+	{
+		type: "paragraph",
+		text: "They can also describe the quantity of nouns - many, few, some, hundreds, ten.",
+	},
+	
+	{
+		type: "paragraph",
+		text: "The three articles used to discuss the specific or nonspecific - a, an, and the Colours and numbers - Purple, red, ten, hundred",
+	},
+	
+	{
+		type: "paragraph",
+		text: "So, adjectives are basically descriptive words that describe or modify other words, making your writing and speaking much more specific, and a whole lot more interesting.",
+	},
+]
+
+
+// Read
+
+[
+	{
+		type: "slide",
+		text: [
+			{
+				type: "title",
+				text: "Adjectives"
+			},
+			{
+				type: "paragraph",
+				text: "Adjectives add information about the noun or pronoun it is modifying, such as its size, colour, shape, or other qualities."
+			},
+			
+			{
+				type: "paragraph",
+				text: "For example, in the sentence "The red apple is delicious," "red" is the adjective modifying the noun "apple." It provides additional information about the apple's colour."
+			},
+			
+			{
+				type: "paragraph",
+				text: "In English, the usual order is for the adjective to come before the noun, as in the example above. However, in some cases, the adjective comes after the noun, as in the woman, beautiful and kind."
+			},
+			
+			{
+				type: "paragraph",
+				styles: ["italic"]
+				text: "Sometimes we use multiple adjectives."
+			},
+			
+			{
+				type: "paragraph",
+				text: "You know it’s proper to say “pretty young girl” and wrong to say “young pretty girl”. There's a rule for this."
+			},
+			
+			{
+				type: "paragraph",
+				text: "<i>The rule is that multiple adjectives are always ranked accordingly: opinion, size, age, shape, colour, origin, material, purpose. Remember</i> <b>OSASCOMP.</b>"
+			},
+		]
+	},
+	{
+		type: "slide",
+		text: [
+			{
+				type: "title",
+				text: "Degrees of comparison"
+			},
+			{
+				type: "paragraph",
+				text: "When we want to compare two or more nouns using adjectives, we use the comparative and superlative forms of the adjective to show the comparison between the nouns."
+			},
+			{
+				type: "paragraph",
+				text: "For example,"
+			},
+			{
+				type: "list",
+				text: ["Jaggery is sweet, honey is sweeter but sugar is the sweetest."]
+			},
+			{
+				type: "paragraph",
+				text: "In this sentence, we are comparing the three nouns using the positive, comparative and superlative forms of the word ‘sweet’."
+			},
+			{
+				type: "hr"
+			},
+			{
+				type: "paragraph",
+				styles: ["italic"]
+				text: "Let’s learn more about these forms."
+			},
+			{
+				type: "title",
+				styles: ["underline"],
+				text: "Positive Form"
+			},
+			{
+				type: "paragraph",
+				text: "These are the simple adjectives that describe the noun without comparing it to another."
+			},
+			
+			{
+				type: "paragraph",
+				text: "Example - big, sweet, clean"
+			},
+			{
+				type: "list",
+				text: [
+					"She has a <b>big</b> lunch bag.",
+					"He is a <b>sweet</b> boy.",
+					"The school is <b>clean.</b>"
+				]
+			},
+			
+			{
+				type: "hr"
+			},
+			{
+				type: "title",
+				styles: ["underline"],
+				text: "Comparative Form"
+			},
+			{
+				type: "paragraph",
+				text: "These are used when we are comparing two nouns and need to show which noun possesses the adjective or character in a greater or lesser amount, when compared with the other."
+			},
+			
+			{
+				type: "paragraph",
+				text: "Example - bigger, sweeter, cleaner"
+			},
+			{
+				type: "list",
+				text: [
+					"I have a big lunch bag but hers is <b>bigger</b>.",
+					"He is <b>sweeter</b> than the other boys.",
+					"The school is <b>cleaner</b> than before."
+				]
+			},
+			
+			{
+				type: "hr"
+			},
+			{
+				type: "title",
+				styles: ["underline"],
+				text: "Superlative Form"
+			},
+			{
+				type: "paragraph",
+				text: "This form is used when three or more nouns are being compared and we need to show that one or more of the nouns possess the adjective or characteristic to the highest amount possible. We usually add ‘the’ before the superlative form."
+			},
+			
+			{
+				type: "paragraph",
+				text: "Example - biggest, sweetest, cleanest"
+			},
+			{
+				type: "list",
+				text: [
+					"She has the <b>biggest</b> lunch bag in the class.",
+					"He is the <b>sweetest</b> boy in his class.",
+					"The school is the <b>cleanest</b> in the city."
+				]
+			},
+			
+			{
+				type: "hr"
+			},
+			{
+				type: "title",
+				styles: ["underline"],
+				text: "Making Comparatives and Superlatives"
+			},
+			{
+				type: "list",
+				text: [
+					"There are certain rules that must be followed in the making of the comparatives and superlatives of the adjectives.",
+					"Not all adjectives form their comparatives and superlatives in the same way and there are also some irregular adjectives that form completely different comparative and superlative forms."
+				]
+			},
+			
+			{
+				type: "title",
+				styles: ["underline"],
+				text: "SINGLE SYLLABLE ADJECTIVES"
+			},
+			{
+				type: "paragraph",
+				text: "We use ‘-er’ to make the comparative and ‘-est’ to make the superlative in small words."
+			},
+			{
+				type: "table",
+				text: {
+					header: ["Positive", "Comparative", "Superlative"],
+					rows: [
+						["Tall","Taller","Tallest"],
+						["Big", "Bigger", "Biggest"],
+						["Hot", "Hotter", "Hottest"]
+					]
+				}
+			},
+			
+			{
+				type: "title",
+				styles: ["underline"],
+				text: "TWO SYLLABLE ADJECTIVES"
+			},
+			{
+				type: "paragraph",
+				text: "Adjectives with two syllables can form the comparative either by adding ‘-er’ or by preceding the adjective with ‘more’. These adjectives form the superlative either by adding ‘-est’ or by preceding the adjective with ‘most’."
+			},
+			{
+				type: "table",
+				text: {
+					header: ["Positive", "Comparative", "Superlative"],
+					rows: [
+						["Happy","Happier","Happiest"],
+						["Famous", "<b>More</b> famous", "<b>Most</b> famous"],
+						["Tangled", "<b>More</b> tangled", "<b>Most</b> tangled"]
+					]
+				}
+			},
+			
+			
+			{
+				type: "title",
+				styles: ["underline"],
+				text: "THREE OR MORE SYLLABLES"
+			},
+			{
+				type: "paragraph",
+				text: "Adjectives with three or more syllables form the comparative by putting ‘more’ in front of the adjective, and the superlative by putting ‘most’ in front."
+			},
+			{
+				type: "table",
+				text: {
+					header: ["Positive", "Comparative", "Superlative"],
+					rows: [
+						["Important", "<b>More</b> important", "<b>Most</b> important"],
+						["Expensive", "<b>More</b> expensive", "<b>Most</b> expensive"]
+					]
+				}
+			},
+			
+			{
+				type: "title",
+				styles: ["underline"],
+				text: "IRREGULAR COMPARATIVES AND SUPERLATIVES"
+			},
+			{
+				type: "paragraph",
+				text: "The following very common adjectives have completely irregular comparative and superlative forms."
+			},
+			{
+				type: "table",
+				text: {
+					header: ["Positive", "Comparative", "Superlative"],
+					rows: [
+						["Good","Better","Best"],
+						["Much", "More", "Most"],
+						["Old", "Older", "Oldest"]
+					]
+				}
+			}
+		]
+	}
+]
+
+// Practice 1
+
+[
+	{
+		type: "paragraph",
+		text: "You can see 8 rows of words with degrees of comparison below. Either one of the three degrees is missing. Write the correct form in the blanks based on the examples you learnt."
+	},
+	
+	{
+		type: "table",
+		text: {
+			header: ["Positive", "Comparative", "Superlative"],
+			rows: [
+				["Pretty","","Prettiest"],
+				["Safe", "Safer", ""],
+				["Bad", "", "Worst"],
+				["", "More complex", "Most complex"],
+				["Bright", "Brighter", ""],
+				["Accurate", "", "Most accurate"],
+				["", "Less", "Least"],
+				["Efficient", "More efficient", ""],
+			]
+		},
+		correct:["Prettier", "Safest", "Worse", "Complex", "Brightest", "More accurate", "Little", "Most efficient"]
+	}
+]
+
+
+
+// Practice 2 : todo
+
+[
+	{
+		type: "paragraph",
+		text: "Listen to the audio clip and answer the questions."
+	},
+	
+]
+
+
+// Speak
+
+[
+	{
+		type: "paragraph",
+		text: "There are 3 topics below and a list of adjectives connected to each topic. Choose any one topic and speak for 60 seconds using at least 5 of the connected adjectives provided. You can write before you speak out the same."
+	},
+	{
+		type: "table",
+		text: {
+			header: ["Topic", "Adjectives"],
+			rows: [
+				["My best friend","Safe, best, more talkative, most intelligent, prettier, happiest, bold, tall"],
+				["Smart phones", "More powerful, interactive, most convenient, entertaining, sleek, versatile, more secure, most innovative, better, stylish"],
+				["Education", "Empowering, most creative, more engaging, most fundamental, enlightening, nurturing, challenge, most innovative, Smarter"]
+			]
+		}
+	}
+]
+
+
+// EOT
+[
+	{
+		type: "title",
+		text: "You have successfully completed Topic 2."
+	},
+	{
+		type: "title",
+		text: "All the best for Topic 3!"
+	},
+]
+
+
+// Topic 3
+
+[
+	{
+		type: "video",
+		text: ""
+	},
+	{
+		type: "paragraph",
+		text: "Did you know that the word \"the\" is the most frequently used  one in the English language?Even this sentence has used the word more than once."
+	},
+	{
+		type: "paragraph",
+		text: "<b>A, An and The</b> - are the three articles that are used before a noun to indicate whether the noun refers to a specific or unspecific item or items. They are also adjectives as we have understood in the previous topic."
+	},
+	{
+		type: "paragraph",
+		text: "When speaking or writing in English, using the correct article can make you sound more fluent and natural. "
+	},
+	{
+		type: "paragraph",
+		text: "Articles are important in English because they can help to clarify the meaning of a sentence and make it easier to understand."
+	},
+	{
+		type: "paragraph",
+		text: "‘The’ is called the definite article because it usually precedes a specific or previously mentioned noun."
+	},
+	{
+		type: "paragraph",
+		text: "‘A’ and ‘An’ are called indefinite articles because they are used to refer to something in a less specific manner."
+	},
+	{
+		type: "paragraph",
+		text: "Observe this example,"
+	},
+	{
+		type: "paragraph",
+		text: "I saw a girl walk by the store. The girl returned to ask for an orange."
+	},
+	{
+		type: "paragraph",
+		text: "Let’s explore each of them."
+	},
+]
+
+
+// Read
+
+[
+	{
+		type: "paragraph",
+		text: "The - The Definite Article"
+	},
+	{
+		type: "page",
+		text: [
+			{
+				type: "title",
+				text: "Let us learn when and how to use it."
+			},
+			{
+				type: "list",
+				text: [
+					"<b>The</b> is used with specific nouns.",
+					"<b>The</b> is required when the noun it refers to represents something that is one of a kind.",
+					"<b>The</b> is required when the noun it refers to represents something named earlier in the text.",
+					"<b>The</b> is used with the, first and subsequent reference.",
+					"<b>The</b> is used when we first refer to something in written text, we often use indefinite articles to modify it."
+				]
+			}
+		]
+	},
+	{
+		type: "page",
+		text: [
+			{
+				type: "title",
+				text: "The four sources of Definiteness"
+			},
+			{
+				type: "paragraph",
+				text: "There are five principal ways in which a reader or listener can know especially what a noun is referring to."
+			},
+			{
+				type: "list",
+				text: [
+					"<b>The noun has been previously mentioned.</b> <div>“I’d like a glass of orange juice, please,“ John said,</div> <div>“I have put the glass of juice on the counter already,“ Sheila replied</div>",
+					"<b>A superlative that makes the noun’s identity specific.</b> <div>Reva is the tallest girl in the class.</div>",
+					"<b>The noun describes a unique person, place, or thing.</b> <div>The Sun sets at dusk.</div><div>The President arrives tomorrow.</div>",
+					"<b>The context or definite article with certain kinds of proper nouns.</b> <ul> <li>Geographical places: The Mount Everest, The Ganges</li> <li>Pluralized names - family, teams: The Jones, The Royal challengers</li> <li>Public institutions, groups - The TATA institute, The JPS group of companies</li> <li>Newspapers - The Hindu, The Times</li> </ul>"
+				]
+			}
+		]
+	},
+	
+	{
+		type: "page",
+		text: [
+			{
+				type: "title",
+				text: "We sometimes use ‘the’ even if it is not needed. Let's understand where not to use it."
+			},
+			{
+				type: "list",
+				text: [
+					"Do not put ‘the’ before the names of meals if they refer to the meals in a generally,as a part of the daily routine.<div>I have <b>lunch</b> at 2 in the afternoon</div>",
+					"Do not put ‘the’ before plural nouns when they are used to a general or a universal sense.<div><b>Houses</b> are expensive in that neighbourhood</div>",
+					"Do not put ‘the’ before the names of games.<div>Sheela plays <b>football</b>.</div>",
+					"Do not use ‘the’ before the names of the countries unless the name suggests that the country is made up of smaller units or constituent parts. <div>Aparna has visited <b>Germany</b> many times.</div>"
+					"Put ‘the’ before the names of mountain ranges, or ranges of hill, but not before the names of single mountains, countries, states, cities, towns, continents or single lakes. <div><b>Mount Everest</b> is in Nepal. But <b>the Himalayas</b> are across many countries.</div>",
+					"Don’t use before proper nouns, uncountable nouns and abstract nouns. <div><b>Priya</b> drinks <b>milk</b> each day as she thinks that it adds brilliance to her complexion.</div>"
+				]
+			}
+		]
+	},
+	
+	{
+		type: "page",
+		text: [
+			{
+				type: "title",
+				text: "‘A’ or ‘An’ - Indefinite Articles"
+			},
+			{
+				type: "list",
+				text: [
+					"The article a is used before consonant sounds;",
+					"Similarly, an is used before vowel sounds.<div><b>Example</b></div><div>I saw <b>an</b> elephant and <b>a</b> lion at the zoo.</div>",
+					
+				]
+			},
+			{
+				type: "paragraph",
+				text: "In spoken English, words beginning with a consonant sometimes have a vowel sound. Sometimes a word beginning with a vowel has a consonant sound. This rule is very important when you use abbreviations and acronyms."
+			},
+			{
+				type: "title",
+				text: "Example :"
+			},
+			{
+				type: "paragraph",
+				text: "My sister has an <b>M.A</b>. in Economics. Yesterday, she sent me an <b>SMS</b> from new mobile phone. The rules are the same. \"M.A.\" is pronounced EM+AY\", so it's a vowel sound. \"SMS\" is pronounced \"es-em-es\", so it's also a vowel sound."
+			},
+			{
+				type: "table",
+				text: {
+					header: ["Consonant Sounds", "Vowel Sounds"],
+					rows: [
+						["A heroic couple (h sound)", "An honest man (o sound)"],
+						["A one rupee note (w sound)","An only child (o sound)"],
+						["A universal problem (y sound)", "An unusual insect (u sound)"],
+						["A papaya (p sound)", "An interesting film (i sound)"],
+						["A big button (b sound)", "An eggy flavour(e sound)"],
+						["A weird smell (w sound)", "An M.com graduate(e sound)"]
+					]
+				}
+			}
+		]
+	},
+	
+	{
+		type: "page",
+		text: [
+			{
+				type: "title",
+				text: "Let us learn when and how to use indefinite articles."
+			},
+			{
+				type: "list",
+				text: [
+					"Before a singular countable noun when it is mentioned for the first time and represents no particular thing. <div>A book is open on the bed.</div>",
+					"Before a singular countable noun which is used as an example of a class of things. <div>A dog is a popular pet.</div><div>An apple a day keeps the doctor away.</div>",
+					"In certain expressions of quantity.<div>A kilo of rice is available now.</div>",
+					"With certain numbers<div>A tenth of the property belongs to Nita.</div>"
+					"Before half when half follows a whole number<div>I would like to order a half dozen donuts.</div>",
+					"In expressions of price, speed and ratio.<div>She bought a dress forRs.5000.</div><div>He was driving at a speed of 80 kilometres per hour.</div><div>The ratio of boys to girls in the class was 2 to 1</div>"
+				]
+			}
+		]
+	},
+	
+	{
+		type: "page",
+		text: [
+			{
+				type: "title",
+				text: "Zero articles"
+			},
+			{
+				type: "title",
+				text: "Several kinds of nouns never use articles. "
+			},
+			{
+				type: "list",
+				text: [
+					"We do not use articles with the names of languages.<div>He was learning Chinese.</div>",
+					"The names of sports.<div>She plays badminton and basketball.</div>",
+					"Academic subjects<div>Her B.com major is accounts.</div>",
+					"With institutions<div>He’s in church/college/jail/class.</div>"
+					"With meals<div>Breakfast was delicious.</div>",
+					"With diseases<div>Appendicitis nearly killed him.</div>",
+					"With time of day <div>We travelled mostly by night.</div>"
+				]
+			}
+		]
+	},
+]
+
+
+
+// Practice 1 : todo
+
+[
+	{
+		type: "title",
+		text: "Add in “a” or “an” to correct these sentences."
+	},
+	{
+		type: "fillblank",
+		text: [
+			["There is ", " new English book on the desk."],
+			["Sheethal used ", " advanced CAD software for 3D modelling."],
+			["He came to the class after ", " hour"],
+			["The company hired ", " experienced civil engineer to oversee the construction project."],
+			["Varun used ", " specialised tool to measure the structural integrity of the building."],
+			["My friend would like to be ", " astronaut."],
+			["He is working on ", " patent for his sustainable invention."],
+			["", " bird is flying above the house."],
+			["Harleen presented her research findings at ", " engineering conference."],
+			["Elizabeth has got ", " amazing idea."]
+		],
+		correctans: []
+	}
+]
+
+
+// Practice 2 : todo
+[
+	{
+		type: "paragraph",
+		text: "Add in ‘the’ or ‘a’, ‘an’ in the blanks to correct the sentences in the following conversation. If an article is not needed you can leave the space empty."
+	},
+	{
+		type: "fillblank",
+		text: 
+	}
+]
+
+

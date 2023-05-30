@@ -41,6 +41,7 @@ exports.create = (req, res) => {
     profile_pic: "",
     preference_id: 1,
     institutionId: req.body.institution,
+    industry_type: req.body.industry_type,
     phone: req.body.phone,
     isActive: 1,
     email: req.body.email,

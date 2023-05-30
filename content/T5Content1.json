@@ -1,0 +1,215 @@
+[
+  {
+    "type": "MultiPage",
+    "text": [
+      {
+        "type": "SubPage",
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Make appropriate article changes  and correct the sentences."
+          },
+          {
+            "type": "AssessmentForm",
+            "weightage": 10,
+            "nQs": 5,
+            "listType": true,
+            "text": [
+              {
+                "type": "TextField",
+                "text": {
+                  "event": "CompareText",
+                  "default": "I need good nap.",
+                  "correct": "I need a good nap."
+                }
+              },
+              {
+                "type": "TextField",
+                "text": {
+                  "event": "CompareText",
+                  "default": "Learning the English is easy.",
+                  "correct": "Learning English is easy."
+                }
+              },
+              {
+                "type": "TextField",
+                "text": {
+                  "event": "CompareText",
+                  "default": "Give me an another pen.",
+                  "correct": "Give me another pen."
+                }
+              },
+              {
+                "type": "TextField",
+                "text": {
+                  "event": "CompareText",
+                  "default": "What is difference between these cars?",
+                  "correct": "What is the difference between these cars?"
+                }
+              },
+              {
+                "type": "TextField",
+                "text": {
+                  "event": "CompareText",
+                  "default": "She returned after the hour.",
+                  "correct": "She returned after an hour."
+                }
+              },
+              {
+                "type": "BlockButton",
+                "text": {
+                  "label": "Check",
+                  "event": "CheckAnswers"
+                }
+              }
+            ]
+          },
+          {
+            "type": "ActionButtons",
+            "text": {
+              "event": "NextPage"
+            }
+          }
+        ]
+      },
+
+      {
+        "type": "SubPage",
+        "text": [
+          {
+            "type": "AssessmentForm",
+            "weightage": 10,
+            "nQs": 5,
+            "listType": true,
+            "text": [
+              {
+                "type": "FillBlankQuestion",
+                "text": {
+                  "parts": [
+                    "The matter is between Chris and",
+                    "fill_input",
+                    "."
+                  ],
+                  "correctAns": "me"
+                }
+              },
+              {
+                "type": "FillBlankQuestion",
+                "text": {
+                  "parts": ["The dog covered", "fill_input", "with dirt."],
+                  "correctAns": "itself"
+                }
+              },
+              {
+                "type": "FillBlankQuestion",
+                "text": {
+                  "parts": ["fill_input", "were you speaking to?"],
+                  "correctAns": "Whom"
+                }
+              },
+              {
+                "type": "FillBlankQuestion",
+                "text": {
+                  "parts": ["fill_input", "is an endangered species now."],
+                  "correctAns": "It"
+                }
+              },
+              {
+                "type": "FillBlankQuestion",
+                "text": {
+                  "parts": [
+                    "Only",
+                    "fill_input",
+                    "are allowed to attend the party."
+                  ],
+                  "correctAns": "you/they"
+                }
+              }
+            ]
+          },
+          {
+            "type": "ActionButtons",
+            "text": {
+              "event": "NextPage"
+            }
+          }
+        ]
+      },
+
+      {
+        "type": "SubPage",
+        "text": [
+          {
+            "type": "Slide",
+            "title": "Listen to these two audio bytes and observe the use of adjectives.",
+            "text": [
+              [
+                {
+                  "type": "paragraph",
+                  "text": "He was widely regarded as the \"People's President\" due to his down-to-earth personality, approachability, and connection with the common people of India. He was known for his vision and contribution to science, technology, and education. He was an accomplished scientist and engineer, specializing in aeronautical engineering. He made significant contributions to India's missile and space programs. He was a visionary leader, an accomplished scientist, and a stronger advocate of education, youth empowerment, and national development. His humility, integrity, and dedication to public service continue to inspire generations of people around the globe. Can you guess the person? He is the renowned Indian scientist, and former President of India,  Dr. APJ Abdul Kalam."
+                },
+                {
+                  "type": "BlockButton",
+                  "text": {
+                    "label": "Listen Now"
+                  }
+                }
+              ],
+              [
+                {
+                  "type": "paragraph",
+                  "text": "It is a vibrant and joyous spring festival celebrated with colors, music, and dance. It is a time for unity, forgiveness, and renewal, and carries deep cultural and religious significance, while also spreading the message of joy, love, and inclusivity beyond cultural boundaries. It is usually celebrated in the month of March, and it typically lasts for several days, marking the arrival of spring and the victory of good over evil.Can you guess the name of the event? It’s Holi, the festival of colours."
+                },
+                {
+                  "type": "BlockButton",
+                  "text": {
+                    "label": "Listen Now"
+                  }
+                }
+              ]
+            ]
+          },
+          {
+            "type": "ActionButtons",
+            "text": {
+              "event": "NextPage"
+            }
+          }
+        ]
+      },
+      {
+        "type": "SubPage",
+        "text": [
+          {
+            "type": "paragraph",
+            "text": "Now that you have listened, choose any one of the topics below. First write about your topic in 10 to 12 sentences using as many adjectives as you can in different degrees of comparison in the write section. Once you are ready, speak the same."
+          },
+          {
+            "type": "list",
+            "text": [
+              "Describe your morning so far.",
+              "Describe what you had for lunch.",
+              "Tell us about your favourite holiday destination.",
+              "Describe your role model.",
+              "Speak about your favourite film star."
+            ]
+          },
+          {
+            "type": "TextBox",
+            "text": {
+              "label": "Write Here"
+            }
+          },
+          {
+            "type": "Recorder",
+            "text": ""
+          },
+          {
+            "type": "ActionButtons",
+            "text": "/module/1/topics"
+          }
+        ]
+      }
+    ]
+  }
+]

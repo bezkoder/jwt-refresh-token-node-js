@@ -33,11 +33,6 @@ db.module = require("../models/module.model.js")(sequelize, Sequelize);
 db.topic = require("../models/topic.model.js")(sequelize, Sequelize);
 db.content = require("../models/content.model.js")(sequelize, Sequelize);
 
-db.listen = require("../models/listen.model.js")(sequelize, Sequelize);
-db.read = require("../models/read.model.js")(sequelize, Sequelize);
-db.speak = require("../models/speak.model.js")(sequelize, Sequelize);
-db.write = require("../models/write.model.js")(sequelize, Sequelize);
-
 // Table Relationships
 db.role.belongsToMany(db.user, {
   through: "user_roles",
@@ -70,6 +65,11 @@ db.user.hasOne(db.refreshToken, {
   targetKey: "id",
 });
 
+db.module.hasMany(db.topic, {
+  foreignKey: "moduleId",
+});
+db.topic.belongsTo(db.module);
+/*
 db.module.belongsToMany(db.topic, {
   through: "modules_topics",
   foreignKey: "moduleId",
@@ -81,46 +81,7 @@ db.topic.belongsToMany(db.module, {
   foreignKey: "topicId",
   otherKey: "moduleId",
 });
-
-/**
- * Topic Content Relation
- */
-db.listen.belongsTo(db.topic, {
-  foreignKey: "topicId",
-  targetKey: "id",
-});
-db.topic.hasOne(db.listen, {
-  foreignKey: "topicId",
-  targetKey: "id",
-});
-
-db.read.belongsTo(db.topic, {
-  foreignKey: "topicId",
-  targetKey: "id",
-});
-db.topic.hasOne(db.read, {
-  foreignKey: "topicId",
-  targetKey: "id",
-});
-
-db.speak.belongsTo(db.topic, {
-  foreignKey: "topicId",
-  targetKey: "id",
-});
-db.topic.hasOne(db.speak, {
-  foreignKey: "topicId",
-  targetKey: "id",
-});
-
-// Write table Relationship
-db.write.belongsTo(db.topic, {
-  foreignKey: "topicId",
-  targetKey: "id",
-});
-db.topic.hasOne(db.write, {
-  foreignKey: "topicId",
-  targetKey: "id",
-});
+*/
 
 db.ROLES = ["user", "admin", "moderator"];
 

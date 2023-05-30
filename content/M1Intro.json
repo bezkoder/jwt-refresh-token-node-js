@@ -1,0 +1,44 @@
+[
+  {
+    "type": "page-title",
+    "text": "Module Introduction"
+  },
+  {
+    "type": "VideoWidget",
+    "text": "/content/media/Mod1.mp4"
+  },
+  {
+    "type": "Section",
+    "scroll": true,
+    "text": [
+      {
+        "type": "TextTitle",
+        "text": "Topics in this module"
+      },
+      {
+        "type": "list",
+        "text": [
+          "Smart tips to fluent English",
+          "Introduce yourself with confidence",
+          "Meetings and Greetings"
+        ]
+      },
+      {
+        "type": "TextTitle",
+        "text": "Important points to understand in this module"
+      },
+      {
+        "type": "list",
+        "text": [
+          "Communicate with confidence",
+          "How to meet and greet in different situations"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ActionButtons",
+    "text": "1/topics",
+    "next_btn_state": false
+  }
+]

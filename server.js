@@ -22,11 +22,11 @@ const db = require("./app/models");
 const Role = db.role;
 const User = db.user;
 const Institution = db.institution;
-//db.sequelize.sync();
+db.sequelize.sync();
 // force: true will drop the table if it already exists
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync().then(() => {
   console.log("Drop and Resync Database with { force: true }");
-  initial();
+  //initial();
 });
 
 // simple route
@@ -43,14 +43,11 @@ require("./app/routes/institution.routes")(app);
 require("./app/routes/module.routes")(app);
 require("./app/routes/topic.routes")(app);
 require("./app/routes/content.routes")(app);
-
-require("./app/routes/listen.routes")(app);
-require("./app/routes/speak.routes")(app);
-require("./app/routes/read.routes")(app);
-require("./app/routes/write.routes")(app);
+require("./app/routes/upload.routes")(app);
 
 app.use("/", express.static(path.join(__dirname, "dashboard/dist")));
-
+app.use("/content/", express.static(path.join(__dirname, "content")));
+app.use("/uploads/", express.static(path.join(__dirname, "uploads")));
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {

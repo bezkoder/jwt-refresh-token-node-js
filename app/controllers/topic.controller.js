@@ -22,18 +22,13 @@ exports.create = (req, res) => {
     subtitle: req.body.subtitle,
     introduction_content: JSON.stringify(req.body.introduction_content),
     introduction_video_url: req.body.introduction_video_url,
+    moduleId: req.body.module,
+    type: req.body.type,
+    industry_type: req.body.industry_type,
     status: 1,
   })
     .then((topic) => {
-      Module.findOne({ where: { id: req.body.module } })
-        .then((module) => {
-          module.setTopics([topic]);
-          res.send({ data: topic });
-        })
-        .catch((error) => {
-          console.log("Error inserting to DB " + error);
-          res.status(500).send({ err: error });
-        });
+      res.send({ data: topic });
     })
     .catch((error) => {
       console.log("Error inserting to DB " + error);
@@ -42,19 +37,16 @@ exports.create = (req, res) => {
 };
 
 exports.getWithModuleId = (req, res) => {
-  Module.findOne({ where: { id: req.params.id } })
-    .then((module) => {
-      module
-        .getTopics()
-        .then((response) => {
-          res.send({ data: response });
-        })
-        .catch((error) => {
-          res.status(500).send({ err: error });
-        });
+  Topic.findAll({
+    where: {
+      moduleId: req.params.id,
+    },
+  })
+    .then((topics) => {
+      res.send({ message: topics });
     })
     .catch((error) => {
-      console.log("Error inserting to DB " + error);
+      console.log("Error fetching Topics from DB " + error);
       res.status(500).send({ err: error });
     });
 };

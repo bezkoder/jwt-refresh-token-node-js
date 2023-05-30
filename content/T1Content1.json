@@ -1,0 +1,64 @@
+[
+  {
+    "type": "TextTitle",
+    "text": "Topic Introduction"
+  },
+  {
+    "type": "VideoWidget",
+    "text": "/content/media/M1T1.mp4"
+  },
+  {
+    "type": "Section",
+    "scroll": true,
+    "text": [
+      {
+        "type": "paragraph",
+        "text": "Learners think that English is a difficult language. Let us understand some of the common reasons as to why they think so, as English is different from other languages across the globe."
+      },
+      {
+        "type": "list",
+        "text": [
+          "Words with the same spelling can have different pronunciations in English",
+          "Grammatical “Rules” too often have exceptions",
+          "English uses a lot of Idioms, that are not meant to be taken literally",
+          "English has different dialects like American English, British English, and Australian English",
+          "Vocabulary can also differ from region to region so finding the right words can be challenging"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Despite these challenges, there’s always value in learning new languages, especially those like English which you will use commonly, socially, in college or at work. That is why it’s a good idea to get some extra help when using English."
+      },
+      {
+        "type": "paragraph",
+        "text": "So, if you’re keen to be a great communicator in English, consider these Smart Tips to make it easy for you."
+      },
+      {
+        "type": "paragraph",
+        "text": " If you add the following ideas to your day-to-day language learning, you will see some marked improvement."
+      },
+      {
+        "type": "list",
+        "text": [
+          "Don’t worry too much about Making Mistakes",
+          "Don’t Speak Very Fast",
+          "Be a Confident Speaker",
+          "Don’t follow written English Style / don’t learn by heart",
+          "Speak Spontaneously",
+          "Don’t worry about starting trouble",
+          "Hear English Everywhere",
+          "Watch Television, films, and relevant  social media",
+          "Learn English idioms and phrases",
+          "Converse with friends and family",
+          "Develop your vocabulary",
+          "Communicate with confidence"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "ActionButtons",
+    "text": "/topic/1/content/2",
+    "next_btn_state": false
+  }
+]

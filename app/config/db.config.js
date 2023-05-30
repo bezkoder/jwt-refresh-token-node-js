@@ -1,5 +1,5 @@
 module.exports = {
-  HOST: "3.143.203.156",
+  HOST: "3.128.94.56",
   USER: "bn_myapp",
   PASSWORD: "",
   DB: "bitnami_myapp",
@@ -8,6 +8,6 @@ module.exports = {
     max: 5,
     min: 0,
     acquire: 30000,
-    idle: 10000
-  }
+    idle: 10000,
+  },
 };

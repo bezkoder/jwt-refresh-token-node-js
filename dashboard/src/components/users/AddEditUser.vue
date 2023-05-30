@@ -67,6 +67,27 @@
           </option>
         </select>
       </div>
+      <div class="col-12">
+        <label class="form-label">Industry Type</label>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          v-model="formdata.industry_type"
+        >
+          <option selected>Select Industry Type</option>
+          <!--option value="-1">Not Applicable</option-->
+          <option value="E">
+            Engineering
+          </option>
+          <option value="H">
+            Healthcare
+          </option>
+          <option value="M">
+            Management
+          </option>
+        </select>
+      </div>
+      
       <div class="col-md-6">
         <label for="inputState" class="form-label">State</label>
         <select id="inputState" class="form-select" v-model="formdata.state">
@@ -119,7 +140,8 @@ export default {
         city: "",
         state: "",
         pincode: "",
-        role:""
+        role:"",
+        industry_type:""
       },
     };
   },
